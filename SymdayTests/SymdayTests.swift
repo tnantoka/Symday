@@ -11,6 +11,9 @@ import XCTest
 
 class SymdayTests: XCTestCase {
     
+    let date = NSDate(timeIntervalSince1970: 1_279_410_659)
+    let timeZone = NSTimeZone(name: "UTC")!
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -32,5 +35,15 @@ class SymdayTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+
+    func testFormatWithDefaultTemplate() {
+        XCTAssertEqual(Symday(timeZone: timeZone).format(date), "Jul 17, 2010")
+        XCTAssertEqual(Symday(timeZone: timeZone, locale: NSLocale(localeIdentifier: "ja_JP")).format(date), "2010年7月17日")
+    }
     
+    func testFormatWithCustomTemplate() {
+        let template = "MdEEE"
+        XCTAssertEqual(Symday(timeZone: timeZone, template: template).format(date), "Sat, 7/17")
+        XCTAssertEqual(Symday(timeZone: timeZone, template: template, locale: NSLocale(localeIdentifier: "ja_JP")).format(date), "7/17(土)")
+    }
 }

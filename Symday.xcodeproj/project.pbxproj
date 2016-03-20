@@ -10,6 +10,7 @@
 		9B70EE9E1C9EDA9400AD9FB4 /* Symday.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B70EE9D1C9EDA9400AD9FB4 /* Symday.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B70EEA51C9EDA9400AD9FB4 /* Symday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B70EE9A1C9EDA9400AD9FB4 /* Symday.framework */; };
 		9B70EEAA1C9EDA9400AD9FB4 /* SymdayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70EEA91C9EDA9400AD9FB4 /* SymdayTests.swift */; };
+		9B70EEB51C9EDAED00AD9FB4 /* Symday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70EEB41C9EDAED00AD9FB4 /* Symday.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		9B70EEA41C9EDA9400AD9FB4 /* SymdayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SymdayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B70EEA91C9EDA9400AD9FB4 /* SymdayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymdayTests.swift; sourceTree = "<group>"; };
 		9B70EEAB1C9EDA9400AD9FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B70EEB41C9EDAED00AD9FB4 /* Symday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symday.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				9B70EE9D1C9EDA9400AD9FB4 /* Symday.h */,
 				9B70EE9F1C9EDA9400AD9FB4 /* Info.plist */,
+				9B70EEB41C9EDAED00AD9FB4 /* Symday.swift */,
 			);
 			path = Symday;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B70EEB51C9EDAED00AD9FB4 /* Symday.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 		9B70EEAF1C9EDA9400AD9FB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +323,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tnantoka.Symday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		9B70EEB01C9EDA9400AD9FB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
