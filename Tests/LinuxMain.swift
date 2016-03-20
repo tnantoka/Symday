@@ -1,5 +1,5 @@
 import XCTest
-@testable import Symday
+@testable import Symdaytest
 
 XCTMain([
     SymdayTests(),

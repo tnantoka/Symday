@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Foundation
 @testable import Symday
 
 #if os(Linux)
@@ -25,14 +26,6 @@ class SymdayTests: XCTestCase {
     let date = NSDate(timeIntervalSince1970: 1_279_410_659)
     let timeZone = NSTimeZone(name: "UTC")!
 
-    override func setUp() {
-        super.setUp()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-    }
-    
     func testDefaultTemplate() {
         XCTAssertEqual(Symday(timeZone: timeZone).format(date), "Jul 17, 2010")
         XCTAssertEqual(Symday(timeZone: timeZone, locale: NSLocale(localeIdentifier: "ja_JP")).format(date), "2010年7月17日")
