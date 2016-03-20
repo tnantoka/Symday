@@ -28,7 +28,7 @@
 		9B70EE9D1C9EDA9400AD9FB4 /* Symday.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Symday.h; sourceTree = "<group>"; };
 		9B70EE9F1C9EDA9400AD9FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B70EEA41C9EDA9400AD9FB4 /* SymdayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SymdayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B70EEA91C9EDA9400AD9FB4 /* SymdayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymdayTests.swift; sourceTree = "<group>"; };
+		9B70EEA91C9EDA9400AD9FB4 /* SymdayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SymdayTests.swift; path = Tests/Symday/SymdayTests.swift; sourceTree = SOURCE_ROOT; };
 		9B70EEAB1C9EDA9400AD9FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B70EEB41C9EDAED00AD9FB4 /* Symday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symday.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,7 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				9B70EE9C1C9EDA9400AD9FB4 /* Symday */,
-				9B70EEA81C9EDA9400AD9FB4 /* SymdayTests */,
+				9B70EEA81C9EDA9400AD9FB4 /* Tests */,
 				9B70EE9B1C9EDA9400AD9FB4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,13 +80,21 @@
 			path = Symday;
 			sourceTree = "<group>";
 		};
-		9B70EEA81C9EDA9400AD9FB4 /* SymdayTests */ = {
+		9B70EEA81C9EDA9400AD9FB4 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9B70EEB61C9EE37F00AD9FB4 /* Symday */,
+				9B70EEAB1C9EDA9400AD9FB4 /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		9B70EEB61C9EE37F00AD9FB4 /* Symday */ = {
 			isa = PBXGroup;
 			children = (
 				9B70EEA91C9EDA9400AD9FB4 /* SymdayTests.swift */,
-				9B70EEAB1C9EDA9400AD9FB4 /* Info.plist */,
 			);
-			path = SymdayTests;
+			path = Symday;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,7 +357,7 @@
 		9B70EEB21C9EDA9400AD9FB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = SymdayTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tnantoka.SymdayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,7 +367,7 @@
 		9B70EEB31C9EDA9400AD9FB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = SymdayTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tnantoka.SymdayTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -385,6 +393,7 @@
 				9B70EEB01C9EDA9400AD9FB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B70EEB11C9EDA9400AD9FB4 /* Build configuration list for PBXNativeTarget "SymdayTests" */ = {
 			isa = XCConfigurationList;
@@ -393,6 +402,7 @@
 				9B70EEB31C9EDA9400AD9FB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
