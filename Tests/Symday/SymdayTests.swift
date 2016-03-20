@@ -34,6 +34,7 @@ class SymdayTests: XCTestCase {
     func testCustomTemplate() {
         let template = "MdEEE"
         XCTAssertEqual(Symday(timeZone: timeZone, template: template).format(date), "Sat, 7/17")
+        XCTAssertEqual(Symday(timeZone: timeZone).format(date, template: template), "Sat, 7/17")
         XCTAssertEqual(Symday(timeZone: timeZone, template: template, locale: NSLocale(localeIdentifier: "ja_JP")).format(date), "7/17(土)")
     }
 }
