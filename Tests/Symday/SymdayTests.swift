@@ -8,7 +8,7 @@
 
 import XCTest
 import Foundation
-@testable import Symday
+import Symday
 
 #if os(Linux)
     extension SymdayTests: XCTestCaseProvider {

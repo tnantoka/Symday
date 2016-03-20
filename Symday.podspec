@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Symday"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "A simple wrapper of dateFormatFromTemplate."
   s.description  = <<-DESC
                    "A cross platform date formatting framework for iOS and Linux."

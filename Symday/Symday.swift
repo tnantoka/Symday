@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Symday {
+public struct Symday {
     var locale = NSLocale.currentLocale()
     var timeZone = NSTimeZone.systemTimeZone()
     var template = "yyyyMMMd"
@@ -20,7 +20,7 @@ struct Symday {
         return formatter
     }
     
-    init(locale: NSLocale? = nil, timeZone: NSTimeZone? = nil, template: String? = nil) {
+    public init(locale: NSLocale? = nil, timeZone: NSTimeZone? = nil, template: String? = nil) {
         if let locale = locale {
             self.locale = locale
         }
@@ -32,11 +32,11 @@ struct Symday {
         }
     }
     
-    func format(date: NSDate) -> String {
+    public func format(date: NSDate) -> String {
         return format(date, template: template)
     }
 
-    func format(date: NSDate, template: String) -> String {
+    public func format(date: NSDate, template: String) -> String {
         let formatter = self.formatter
         let format = NSDateFormatter.dateFormatFromTemplate(template, options: 0, locale: formatter.locale)
         formatter.dateFormat = format
