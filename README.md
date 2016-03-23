@@ -32,8 +32,8 @@ pod 'Symday'
 import Symday
 
 let date = NSDate(timeIntervalSince1970: 1_279_410_659)
-Symday.format(date) // Jul 17, 2010
-Symday.format(date, template: "MdEEE") // Sat, 7/17
+Symday().format(date) // Jul 17, 2010
+Symday().format(date, template: "MdEEE") // Sat, 7/17
 Symday(locale: NSLocale(localeIdentifier: "ja_JP")).format(date) // 2010年7月17日
 ```
 
